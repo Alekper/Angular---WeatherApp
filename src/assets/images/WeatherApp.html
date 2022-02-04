@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:4200/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>WeatherApp</title>
+  <!--<base href="/">--><base href=".">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="http://localhost:4200/favicon.ico">
+<link rel="stylesheet" href="./WeatherApp_files/styles.css"><style>.body[_ngcontent-wek-c49] {
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.card[_ngcontent-wek-c49] {
+    width: 600px;
+    height: 350px;
+    border-radius: 20px;
+    background-color: #000000d0;
+    position: relative;
+    top: -60%;
+    left: 50%;
+    transform: translate(-50%, 40%);
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.search[_ngcontent-wek-c49] {
+    width: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#search-input[_ngcontent-wek-c49] {
+    background-color: rgba(0, 0, 0, 0.158);
+    outline: none;
+    width: 250px;
+    height: 40px;
+    font-size: 1rem;
+    text-transform: capitalize;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    padding: 5px 40px 5px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.142);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#search-button[_ngcontent-wek-c49] {
+    position: absolute;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    right: 0;
+    padding: 10px;
+    margin-right: -20px;
+    margin-top: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.13);
+}
+
+#search-button[_ngcontent-wek-c49]:hover {
+    background: rgba(255, 255, 255, 0.712);
+    color: rgba(0, 0, 0, 0.692);
+}
+
+#search-input[_ngcontent-wek-c49]:-webkit-autofill, #search-input[_ngcontent-wek-c49]   [_ngcontent-wek-c49]:-webkit-autofill:hover, #search-input[_ngcontent-wek-c49]   [_ngcontent-wek-c49]:-webkit-autofill:focus, textarea[_ngcontent-wek-c49]:-webkit-autofill, textarea[_ngcontent-wek-c49]:-webkit-autofill:hover, textarea[_ngcontent-wek-c49]:-webkit-autofill:focus, select[_ngcontent-wek-c49]:-webkit-autofill, select[_ngcontent-wek-c49]:-webkit-autofill:hover, select[_ngcontent-wek-c49]:-webkit-autofill:focus {
+    border: 1px solid rgba(0, 0, 0, 0.142);
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0.142) inset;
+    -webkit-transition: background-color 5000s ease-in-out 0s;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+
+
+
+
+.main[_ngcontent-wek-c49] {
+    position: absolute;
+    width: 100%;
+    top: 15%;
+    height: 250px;
+}
+
+.main[_ngcontent-wek-c49]   h1[_ngcontent-wek-c49] {
+    position: absolute;
+    font-size: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+}
+
+.weather-icon[_ngcontent-wek-c49] {
+    width: 150px;
+    height: 150px;
+    margin-left: 40px;
+}
+
+.temperature[_ngcontent-wek-c49] {
+    display: flex;
+    position: absolute;
+    left: 10%;
+    margin-top: 55px;
+}
+
+.temperature[_ngcontent-wek-c49]   p[_ngcontent-wek-c49] {
+    font-size: 50px;
+    color: white;
+}
+
+.details[_ngcontent-wek-c49] {
+    width: 500px;
+    color: white;
+    font-size: large;
+    height: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -200px;
+    margin-bottom: -10px;
+    grid-template-rows: 50px;
+}
+
+hr[_ngcontent-wek-c49] {
+    position: absolute;
+    top: 70%;
+    width: 100%;
+    border: 1px solid white;
+    background: white;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0kscUVBQXFFO0lBQ3JFLDRCQUE0QjtJQUM1Qiw0QkFBNEI7SUFDNUIsMkJBQTJCO0lBQzNCLGFBQWE7SUFDYixZQUFZO0FBQ2hCOztBQUVBO0lBQ0ksWUFBWTtJQUNaLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsMkJBQTJCO0lBQzNCLGtCQUFrQjtJQUNsQixTQUFTO0lBQ1QsU0FBUztJQUNULCtCQUErQjtJQUMvQixhQUFhO0lBQ2Isc0JBQXNCO0FBQzFCOztBQUdBLGlCQUFpQjs7QUFFakI7SUFDSSxZQUFZO0lBQ1osU0FBUztJQUNULDJCQUEyQjtJQUMzQixrQkFBa0I7SUFDbEIsZ0JBQWdCO0lBQ2hCLGFBQWE7SUFDYiw4QkFBOEI7QUFDbEM7O0FBRUE7SUFDSSxzQ0FBc0M7SUFDdEMsYUFBYTtJQUNiLFlBQVk7SUFDWixZQUFZO0lBQ1osZUFBZTtJQUNmLDBCQUEwQjtJQUMxQixtQkFBbUI7SUFDbkIsWUFBWTtJQUNaLFlBQVk7SUFDWiwwQkFBMEI7SUFDMUIsc0NBQXNDO0lBQ3RDLGtCQUFrQjtJQUNsQixTQUFTO0lBQ1QsMkJBQTJCO0FBQy9COztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLHVCQUF1QjtJQUN2QixZQUFZO0lBQ1osZUFBZTtJQUNmLFFBQVE7SUFDUixhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLGVBQWU7SUFDZixrQkFBa0I7SUFDbEIscUNBQXFDO0FBQ3pDOztBQUVBO0lBQ0ksc0NBQXNDO0lBQ3RDLDJCQUEyQjtBQUMvQjs7QUFFQTs7Ozs7Ozs7O0lBU0ksc0NBQXNDO0lBQ3RDLDhCQUE4QjtJQUM5Qiw2REFBNkQ7SUFDN0QseURBQWlEO0lBQWpELGlEQUFpRDtBQUNyRDs7QUFHQSxzQkFBc0I7O0FBR3RCLGFBQWE7O0FBRWI7SUFDSSxrQkFBa0I7SUFDbEIsV0FBVztJQUNYLFFBQVE7SUFDUixhQUFhO0FBQ2pCOztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLGVBQWU7SUFDZixTQUFTO0lBQ1QsMkJBQTJCO0lBQzNCLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxZQUFZO0lBQ1osYUFBYTtJQUNiLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLGFBQWE7SUFDYixrQkFBa0I7SUFDbEIsU0FBUztJQUNULGdCQUFnQjtBQUNwQjs7QUFFQTtJQUNJLGVBQWU7SUFDZixZQUFZO0FBQ2hCOztBQUVBO0lBQ0ksWUFBWTtJQUNaLFlBQVk7SUFDWixnQkFBZ0I7SUFDaEIsWUFBWTtJQUNaLGFBQWE7SUFDYiw4QkFBOEI7SUFDOUIsa0JBQWtCO0lBQ2xCLFNBQVM7SUFDVCxTQUFTO0lBQ1QsbUJBQW1CO0lBQ25CLG9CQUFvQjtJQUNwQix3QkFBd0I7QUFDNUI7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsUUFBUTtJQUNSLFdBQVc7SUFDWCx1QkFBdUI7SUFDdkIsaUJBQWlCO0FBQ3JCOztBQUdBLGtCQUFrQiIsImZpbGUiOiJhcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5ib2R5IHtcclxuICAgIC8qIGJhY2tncm91bmQ6IHVybCgnaHR0cHM6Ly9zb3VyY2UudW5zcGxhc2guY29tLzE2MDB4OTAwLz9sb25kb24nKTsgKi9cclxuICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbiAgICBiYWNrZ3JvdW5kLWF0dGFjaG1lbnQ6IGZpeGVkO1xyXG4gICAgYmFja2dyb3VuZC1wb3NpdGlvbjogY2VudGVyO1xyXG4gICAgaGVpZ2h0OiAxMDB2aDtcclxuICAgIHdpZHRoOiAxMDB2dztcclxufVxyXG5cclxuLmNhcmQge1xyXG4gICAgd2lkdGg6IDYwMHB4O1xyXG4gICAgaGVpZ2h0OiAzNTBweDtcclxuICAgIGJvcmRlci1yYWRpdXM6IDIwcHg7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDAwMDAwZDA7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICB0b3A6IC02MCU7XHJcbiAgICBsZWZ0OiA1MCU7XHJcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCA0MCUpO1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbn1cclxuXHJcblxyXG4vKiBTZWFyY2ggRmllbGQgKi9cclxuXHJcbi5zZWFyY2gge1xyXG4gICAgd2lkdGg6IDI1MHB4O1xyXG4gICAgbGVmdDogNTAlO1xyXG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVYKC01MCUpO1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgbWFyZ2luLXRvcDogMTBweDtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XHJcbn1cclxuXHJcbiNzZWFyY2gtaW5wdXQge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLCAwLCAwLCAwLjE1OCk7XHJcbiAgICBvdXRsaW5lOiBub25lO1xyXG4gICAgd2lkdGg6IDI1MHB4O1xyXG4gICAgaGVpZ2h0OiA0MHB4O1xyXG4gICAgZm9udC1zaXplOiAxcmVtO1xyXG4gICAgdGV4dC10cmFuc2Zvcm06IGNhcGl0YWxpemU7XHJcbiAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xyXG4gICAgYm9yZGVyOiBub25lO1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG4gICAgcGFkZGluZzogNXB4IDQwcHggNXB4IDEwcHg7XHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCByZ2JhKDAsIDAsIDAsIDAuMTQyKTtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIGxlZnQ6IDUwJTtcclxuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgtNTAlKTtcclxufVxyXG5cclxuI3NlYXJjaC1idXR0b24ge1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgYmFja2dyb3VuZDogdHJhbnNwYXJlbnQ7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgICByaWdodDogMDtcclxuICAgIHBhZGRpbmc6IDEwcHg7XHJcbiAgICBtYXJnaW4tcmlnaHQ6IC0yMHB4O1xyXG4gICAgbWFyZ2luLXRvcDogNnB4O1xyXG4gICAgYm9yZGVyLXJhZGl1czogNTAlO1xyXG4gICAgYmFja2dyb3VuZDogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjEzKTtcclxufVxyXG5cclxuI3NlYXJjaC1idXR0b246aG92ZXIge1xyXG4gICAgYmFja2dyb3VuZDogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjcxMik7XHJcbiAgICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwLjY5Mik7XHJcbn1cclxuXHJcbiNzZWFyY2gtaW5wdXQ6LXdlYmtpdC1hdXRvZmlsbCxcclxuI3NlYXJjaC1pbnB1dCA6LXdlYmtpdC1hdXRvZmlsbDpob3ZlcixcclxuI3NlYXJjaC1pbnB1dCA6LXdlYmtpdC1hdXRvZmlsbDpmb2N1cyxcclxudGV4dGFyZWE6LXdlYmtpdC1hdXRvZmlsbCxcclxudGV4dGFyZWE6LXdlYmtpdC1hdXRvZmlsbDpob3ZlcixcclxudGV4dGFyZWE6LXdlYmtpdC1hdXRvZmlsbDpmb2N1cyxcclxuc2VsZWN0Oi13ZWJraXQtYXV0b2ZpbGwsXHJcbnNlbGVjdDotd2Via2l0LWF1dG9maWxsOmhvdmVyLFxyXG5zZWxlY3Q6LXdlYmtpdC1hdXRvZmlsbDpmb2N1cyB7XHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCByZ2JhKDAsIDAsIDAsIDAuMTQyKTtcclxuICAgIC13ZWJraXQtdGV4dC1maWxsLWNvbG9yOiB3aGl0ZTtcclxuICAgIC13ZWJraXQtYm94LXNoYWRvdzogMCAwIDBweCAxMDAwcHggcmdiYSgwLCAwLCAwLCAwLjE0MikgaW5zZXQ7XHJcbiAgICB0cmFuc2l0aW9uOiBiYWNrZ3JvdW5kLWNvbG9yIDUwMDBzIGVhc2UtaW4tb3V0IDBzO1xyXG59XHJcblxyXG5cclxuLyogU2VhcmNoIGZpZWxkIGVuZHMgKi9cclxuXHJcblxyXG4vKiBNYWluIGRpdiAqL1xyXG5cclxuLm1haW4ge1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICB0b3A6IDE1JTtcclxuICAgIGhlaWdodDogMjUwcHg7XHJcbn1cclxuXHJcbi5tYWluIGgxIHtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIGZvbnQtc2l6ZTogNDVweDtcclxuICAgIGxlZnQ6IDUwJTtcclxuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgtNTAlKTtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxufVxyXG5cclxuLndlYXRoZXItaWNvbiB7XHJcbiAgICB3aWR0aDogMTUwcHg7XHJcbiAgICBoZWlnaHQ6IDE1MHB4O1xyXG4gICAgbWFyZ2luLWxlZnQ6IDQwcHg7XHJcbn1cclxuXHJcbi50ZW1wZXJhdHVyZSB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgbGVmdDogMTAlO1xyXG4gICAgbWFyZ2luLXRvcDogNTVweDtcclxufVxyXG5cclxuLnRlbXBlcmF0dXJlIHAge1xyXG4gICAgZm9udC1zaXplOiA1MHB4O1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG59XHJcblxyXG4uZGV0YWlscyB7XHJcbiAgICB3aWR0aDogNTAwcHg7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbiAgICBmb250LXNpemU6IGxhcmdlO1xyXG4gICAgaGVpZ2h0OiA4MHB4O1xyXG4gICAgZGlzcGxheTogZ3JpZDtcclxuICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyIDFmcjtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIGJvdHRvbTogMDtcclxuICAgIGxlZnQ6IDUwJTtcclxuICAgIG1hcmdpbi1sZWZ0OiAtMjAwcHg7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAtMTBweDtcclxuICAgIGdyaWQtdGVtcGxhdGUtcm93czogNTBweDtcclxufVxyXG5cclxuaHIge1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgdG9wOiA3MCU7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGJvcmRlcjogMXB4IHNvbGlkIHdoaXRlO1xyXG4gICAgYmFja2dyb3VuZDogd2hpdGU7XHJcbn1cclxuXHJcblxyXG4vKiBNYWluIGRpdiBlbmRzICovIl19 */</style><style>#logo[_ngcontent-wek-c16] {
+    width: 65px;
+    height: 65px;
+    margin-left: 30px;
+}
+
+.nav-menu[_ngcontent-wek-c16] {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #000000d0;
+}
+
+.nav-menu[_ngcontent-wek-c16]   ul[_ngcontent-wek-c16] {
+    margin-top: 20px;
+}
+
+.nav-menu[_ngcontent-wek-c16]   ul[_ngcontent-wek-c16]   li[_ngcontent-wek-c16] {
+    display: inline;
+    
+    font-size: 1.05rem;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 15px 0;
+}
+
+.nav-menu[_ngcontent-wek-c16]   ul[_ngcontent-wek-c16]   li[_ngcontent-wek-c16]   a[_ngcontent-wek-c16] {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 15px 25px;
+}
+
+.nav-menu[_ngcontent-wek-c16]   ul[_ngcontent-wek-c16]   li[_ngcontent-wek-c16]:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm5hdmlnYXRpb24tbWVudS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksV0FBVztJQUNYLFlBQVk7SUFDWixpQkFBaUI7QUFDckI7O0FBRUE7SUFDSSxhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLDhCQUE4QjtJQUM5QixhQUFhO0lBQ2IsMkJBQTJCO0FBQy9COztBQUVBO0lBQ0ksZ0JBQWdCO0FBQ3BCOztBQUVBO0lBQ0ksZUFBZTtJQUNmLHdCQUF3QjtJQUN4QixrQkFBa0I7SUFDbEIsZUFBZTtJQUNmLGlCQUFpQjtJQUNqQixrQkFBa0I7SUFDbEIsZUFBZTtBQUNuQjs7QUFFQTtJQUNJLFlBQVk7SUFDWixxQkFBcUI7SUFDckIsZUFBZTtJQUNmLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLDBDQUEwQztBQUM5QyIsImZpbGUiOiJuYXZpZ2F0aW9uLW1lbnUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIiNsb2dvIHtcclxuICAgIHdpZHRoOiA2NXB4O1xyXG4gICAgaGVpZ2h0OiA2NXB4O1xyXG4gICAgbWFyZ2luLWxlZnQ6IDMwcHg7XHJcbn1cclxuXHJcbi5uYXYtbWVudSB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC1kaXJlY3Rpb246IHJvdztcclxuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcclxuICAgIHBhZGRpbmc6IDE1cHg7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDAwMDAwZDA7XHJcbn1cclxuXHJcbi5uYXYtbWVudSB1bCB7XHJcbiAgICBtYXJnaW4tdG9wOiAyMHB4O1xyXG59XHJcblxyXG4ubmF2LW1lbnUgdWwgbGkge1xyXG4gICAgZGlzcGxheTogaW5saW5lO1xyXG4gICAgLyogcGFkZGluZzogMTVweCAyNXB4OyAqL1xyXG4gICAgZm9udC1zaXplOiAxLjA1cmVtO1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XHJcbiAgICBwYWRkaW5nOiAxNXB4IDA7XHJcbn1cclxuXHJcbi5uYXYtbWVudSB1bCBsaSBhIHtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICAgIHBhZGRpbmc6IDE1cHggMjVweDtcclxufVxyXG5cclxuLm5hdi1tZW51IHVsIGxpOmhvdmVyIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC41KTtcclxufSJdfQ== */</style></head>
+<body data-new-gr-c-s-check-loaded="14.1045.0" data-gr-ext-installed="">
+  <app-root _nghost-wek-c49="" ng-version="13.1.2"><link _ngcontent-wek-c49="" rel="stylesheet" href="./WeatherApp_files/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"><div _ngcontent-wek-c49="" class="body" ng-reflect-ng-style="[object Object]"><app-navigation-menu _ngcontent-wek-c49="" _nghost-wek-c16=""><nav _ngcontent-wek-c16="" class="nav-menu"><a _ngcontent-wek-c16="" href="http://localhost:4200/"><img _ngcontent-wek-c16="" id="logo" src="./WeatherApp_files/1200px-Circle-icons-weather.svg.png" alt=""></a></nav></app-navigation-menu><div _ngcontent-wek-c49="" class="body-second"><div _ngcontent-wek-c49="" class="card"><div _ngcontent-wek-c49="" class="search"><form _ngcontent-wek-c49="" novalidate="" class="ng-valid ng-dirty ng-touched"><input _ngcontent-wek-c49="" type="text" ngmodel="" name="search" id="search-input" placeholder="Search..." ng-reflect-model="" ng-reflect-name="search" class="ng-valid ng-dirty ng-touched"><button _ngcontent-wek-c49="" id="search-button"><i _ngcontent-wek-c49="" class="fas fa-search"></i></button></form></div><div _ngcontent-wek-c49="" class="main"><h1 _ngcontent-wek-c49=""></h1><div _ngcontent-wek-c49="" class="temperature"><p _ngcontent-wek-c49="" style="font-size: 50px;">23<span _ngcontent-wek-c49="">°</span> C</p><img _ngcontent-wek-c49="" src="./WeatherApp_files/cloudy-icon-15.jpg" alt="" class="weather-icon"></div><hr _ngcontent-wek-c49=""><div _ngcontent-wek-c49="" class="details"><h4 _ngcontent-wek-c49="">Feels like:</h4><h4 _ngcontent-wek-c49="">Humidity:</h4><h4 _ngcontent-wek-c49="">Wind speed:</h4><h4 _ngcontent-wek-c49="">Pressure:</h4></div></div></div></div><router-outlet _ngcontent-wek-c49=""></router-outlet><!--container--></div></app-root>
+<script src="./WeatherApp_files/runtime.js.download" type="module"></script><script src="./WeatherApp_files/polyfills.js.download" type="module"></script><script src="./WeatherApp_files/styles.js.download" defer=""></script><script src="./WeatherApp_files/vendor.js.download" type="module"></script><script src="./WeatherApp_files/main.js.download" type="module"></script>
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

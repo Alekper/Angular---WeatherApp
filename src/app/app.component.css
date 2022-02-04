@@ -1,0 +1,289 @@
+.body {
+    background: url('https://source.unsplash.com/1600x900/?weather');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
+    min-height: 100vh;
+}
+
+.card {
+    width: 700px;
+    height: 350px;
+    border-radius: 20px;
+    background-color: #000000d0;
+    position: relative;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    display: flex;
+    flex-direction: column;
+    -webkit-transform: translate(-50%, 50%);
+    -moz-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    -o-transform: translate(-50%, 50%);
+}
+
+
+/* Search Field */
+
+.search {
+    width: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    margin-top: -30px;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    transition: 0.4s;
+}
+
+#search-input {
+    background-color: rgba(0, 0, 0, 0.158);
+    outline: none;
+    width: 250px;
+    height: 40px;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    padding: 5px 40px 5px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.142);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#search-button {
+    position: absolute;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    right: 0;
+    padding: 10px;
+    margin-right: -20px;
+    margin-top: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.13);
+}
+
+#search-button:hover {
+    background: rgba(255, 255, 255, 0.712);
+    color: rgba(0, 0, 0, 0.692);
+}
+
+#search-input:-webkit-autofill,
+#search-input :-webkit-autofill:hover,
+#search-input :-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border: 1px solid rgba(0, 0, 0, 0.142);
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0.142) inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+
+/* Search field ends */
+
+
+/* Main div */
+
+.main {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 15%;
+    height: 250px;
+}
+
+.main h1 {
+    position: absolute;
+    font-size: 45px;
+    margin-top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-transform: capitalize;
+}
+
+.weather-icon {
+    width: 120px;
+    height: 120px;
+    margin-left: 40px;
+}
+
+.temperature {
+    display: flex;
+    position: absolute;
+    left: 10%;
+    margin-top: 55px;
+}
+
+.temperature p {
+    font-size: 50px;
+    color: white;
+}
+
+.details {
+    width: 500px;
+    color: white;
+    font-size: large;
+    height: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -200px;
+    margin-bottom: -10px;
+    grid-template-rows: 50px;
+}
+
+hr {
+    position: absolute;
+    top: 70%;
+    width: 100%;
+    border: 1px solid white;
+    background: white;
+}
+
+#description {
+    font-size: 36px;
+    margin-top: 40px;
+    /* margin-right: -50px; */
+    padding-left: 40px;
+}
+
+
+/* Main div ends */
+
+@media screen and (min-width: 280px) and (max-width: 576px) {
+    .card {
+        margin: 0 !important;
+        width: 260px;
+        height: 500px;
+        transform: translate(-50%, 10%);
+        -webkit-transform: translate(-50%, 10%);
+        -moz-transform: translate(-50%, 10%);
+        -ms-transform: translate(-50%, 10%);
+        -o-transform: translate(-50%, 10%);
+    }
+    .search,
+    #search-input {
+        width: 150px;
+    }
+    .search {
+        padding: 10px 0 20px 0;
+    }
+    .main {
+        width: 260px;
+    }
+    .details {
+        width: 200px;
+    }
+    .main {
+        flex-direction: column;
+    }
+    .details {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 25%;
+        margin-left: 0px;
+        margin-bottom: -90px;
+    }
+    .details h4 {
+        margin-bottom: -20px;
+    }
+    .temperature {
+        margin-bottom: -70px;
+        left: 50%;
+        transform: translateX(-10%);
+        display: flex;
+        flex-direction: column;
+        -webkit-transform: translateX(-10%);
+        -moz-transform: translateX(-10%);
+        -ms-transform: translateX(-10%);
+        -o-transform: translateX(-10%);
+    }
+    .weather-icon {
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        left: 0%;
+        margin-left: -60px;
+        margin-top: -40px;
+    }
+    .main h1 {
+        font-size: 35px;
+        margin-top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        text-transform: capitalize;
+    }
+    .temperature p {
+        font-size: 250px;
+        margin-top: 50px;
+        margin-left: -40px;
+    }
+    #description {
+        width: 150px;
+        text-align: center;
+        font-size: 0.9rem;
+        margin-top: 140px;
+        padding-left: 0;
+        margin-bottom: 20px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+    }
+    hr {
+        top: 100%;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .card {
+        width: 500px;
+        height: 420px;
+        top: -50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        -webkit-transform: translate(-50%, 20%);
+        -moz-transform: translate(-50%, 20%);
+        -ms-transform: translate(-50%, 20%);
+        -o-transform: translate(-50%, 20%);
+    }
+    #description {
+        /* margin-left: -10px; */
+        width: 100px;
+        position: absolute;
+        right: 10%;
+        /* margin-right: -50px; */
+    }
+    .temperature {
+        width: 400px;
+    }
+    #main-temp {
+        /* padding-right: 20px;
+        font-size: 2rem; */
+        left: 0;
+        position: absolute;
+    }
+    .weather-icon {
+        position: absolute;
+        left: 24%;
+    }
+}

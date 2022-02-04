@@ -1,0 +1,43 @@
+#logo {
+    width: 100px;
+    height: 100px;
+    /* margin-left: 30px; */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-menu {
+    height: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #000000d0;
+}
+
+.nav-menu ul {
+    margin-top: 20px;
+}
+
+.nav-menu ul li {
+    display: inline;
+    /* padding: 15px 25px; */
+    font-size: 1.05rem;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 15px 0;
+}
+
+.nav-menu ul li a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 15px 25px;
+}
+
+.nav-menu ul li:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
